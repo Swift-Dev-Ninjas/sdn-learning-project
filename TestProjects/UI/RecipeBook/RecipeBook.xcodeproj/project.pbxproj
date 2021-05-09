@@ -15,6 +15,9 @@
 		243A14012647C6F400E7AE6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243A13FF2647C6F400E7AE6B /* LaunchScreen.storyboard */; };
 		243A140C2647C6F400E7AE6B /* RecipeBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A140B2647C6F400E7AE6B /* RecipeBookTests.swift */; };
 		243A14172647C6F400E7AE6B /* RecipeBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A14162647C6F400E7AE6B /* RecipeBookUITests.swift */; };
+		243A142D2647C9E400E7AE6B /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A142C2647C9E400E7AE6B /* CollectionViewController.swift */; };
+		243A14332647CA0800E7AE6B /* CollectionViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A14312647CA0800E7AE6B /* CollectionViewSectionHeader.swift */; };
+		243A14342647CA0800E7AE6B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A14322647CA0800E7AE6B /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		243A14122647C6F400E7AE6B /* RecipeBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		243A14162647C6F400E7AE6B /* RecipeBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBookUITests.swift; sourceTree = "<group>"; };
 		243A14182647C6F400E7AE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		243A142C2647C9E400E7AE6B /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		243A14312647CA0800E7AE6B /* CollectionViewSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionHeader.swift; sourceTree = "<group>"; };
+		243A14322647CA0800E7AE6B /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,11 @@
 		243A13F32647C6F300E7AE6B /* RecipeBook */ = {
 			isa = PBXGroup;
 			children = (
+				243A14272647C8BE00E7AE6B /* Resources */,
+				243A14282647C8C700E7AE6B /* Protocols */,
+				243A14292647C8D600E7AE6B /* Model */,
+				243A142B2647C8EA00E7AE6B /* View */,
+				243A142A2647C8DF00E7AE6B /* ViewModel */,
 				243A13F42647C6F300E7AE6B /* AppDelegate.swift */,
 				243A13F62647C6F300E7AE6B /* SceneDelegate.swift */,
 				243A13F82647C6F300E7AE6B /* ViewController.swift */,
@@ -126,6 +137,44 @@
 				243A14182647C6F400E7AE6B /* Info.plist */,
 			);
 			path = RecipeBookUITests;
+			sourceTree = "<group>";
+		};
+		243A14272647C8BE00E7AE6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		243A14282647C8C700E7AE6B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		243A14292647C8D600E7AE6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		243A142A2647C8DF00E7AE6B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		243A142B2647C8EA00E7AE6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				243A14322647CA0800E7AE6B /* CollectionViewCell.swift */,
+				243A14312647CA0800E7AE6B /* CollectionViewSectionHeader.swift */,
+				243A142C2647C9E400E7AE6B /* CollectionViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243A14332647CA0800E7AE6B /* CollectionViewSectionHeader.swift in Sources */,
+				243A142D2647C9E400E7AE6B /* CollectionViewController.swift in Sources */,
+				243A14342647CA0800E7AE6B /* CollectionViewCell.swift in Sources */,
 				243A13F92647C6F300E7AE6B /* ViewController.swift in Sources */,
 				243A13F52647C6F300E7AE6B /* AppDelegate.swift in Sources */,
 				243A13F72647C6F300E7AE6B /* SceneDelegate.swift in Sources */,
