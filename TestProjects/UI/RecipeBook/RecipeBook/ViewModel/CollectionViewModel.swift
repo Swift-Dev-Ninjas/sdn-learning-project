@@ -34,4 +34,21 @@ class CollectionViewModel {
     func numberOfSections() -> Int {
         return recipeBook?.categories?.count ?? 0
     }
+    
+    func numberOfItemsInSection(_ section: Int) -> Int {
+        guard let recipeBook = recipeBook,
+            let categories = recipeBook.categories else {
+                return 0
+        }
+        
+        if ((section < 0) || (section >= categories.count)) {
+            return 0
+        }
+        
+        guard let recipes = categories[section].recipes else {
+            return 0
+        }
+        
+        return recipes.count
+    }
 }

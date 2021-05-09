@@ -118,3 +118,39 @@ extension CollectionViewModelTests {
         XCTAssertEqual(viewModel.numberOfSections(), 0)
     }
 }
+
+// MARK: numberOfItemsInSection tests
+extension CollectionViewModelTests {
+    
+    func testNumberOfItemsInSection_ValidViewModelNilAlbum_ReturnsZero() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        viewModel.recipeBook = nil
+        
+        XCTAssertEqual(viewModel.numberOfItemsInSection(0), 0)
+    }
+    
+    func testNumberOfItemsInSection_ValidViewModelNilCities_ReturnsZero() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        viewModel.recipeBook!.categories = nil
+        
+        XCTAssertEqual(viewModel.numberOfItemsInSection(0), 0)
+    }
+    
+    func testNumberOfItemsInSection_NegtiveSectionIndex_ReturnsZero() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+
+        XCTAssertEqual(viewModel.numberOfItemsInSection(-1), 0)
+    }
+    
+    func testNumberOfItemsInSection_OutOfBoundsSectionIndex_ReturnsZero() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        
+        XCTAssertEqual(viewModel.numberOfItemsInSection(1000), 0)
+    }
+    
+    func testNumberOfItemsInSection_ValidSectionIndex_ReturnsExpectedValue() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        
+        XCTAssertEqual(viewModel.numberOfItemsInSection(0), viewModel.recipeBook!.categories![0].recipes!.count)
+    }
+}
