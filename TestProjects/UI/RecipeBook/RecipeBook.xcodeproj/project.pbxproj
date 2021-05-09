@@ -21,6 +21,8 @@
 		243A14412647D4A300E7AE6B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A14402647D4A300E7AE6B /* Recipe.swift */; };
 		243A14462647D70F00E7AE6B /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A14452647D70F00E7AE6B /* RecipeCategory.swift */; };
 		243A144B2647D93900E7AE6B /* RecipeBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A144A2647D93900E7AE6B /* RecipeBook.swift */; };
+		243A14502647E8F200E7AE6B /* RecipeBook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 243A144F2647E8F200E7AE6B /* RecipeBook.plist */; };
+		24F7B06426482DF1005FC59C /* carbonara.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24F7B06326482DF1005FC59C /* carbonara.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		243A14402647D4A300E7AE6B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		243A14452647D70F00E7AE6B /* RecipeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategory.swift; sourceTree = "<group>"; };
 		243A144A2647D93900E7AE6B /* RecipeBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBook.swift; sourceTree = "<group>"; };
+		243A144F2647E8F200E7AE6B /* RecipeBook.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RecipeBook.plist; sourceTree = "<group>"; };
+		24F7B06326482DF1005FC59C /* carbonara.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carbonara.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 		243A14272647C8BE00E7AE6B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				24F7B06326482DF1005FC59C /* carbonara.jpg */,
+				243A144F2647E8F200E7AE6B /* RecipeBook.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -290,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				243A14012647C6F400E7AE6B /* LaunchScreen.storyboard in Resources */,
+				243A14502647E8F200E7AE6B /* RecipeBook.plist in Resources */,
 				243A13FE2647C6F400E7AE6B /* Assets.xcassets in Resources */,
+				24F7B06426482DF1005FC59C /* carbonara.jpg in Resources */,
 				243A13FC2647C6F300E7AE6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

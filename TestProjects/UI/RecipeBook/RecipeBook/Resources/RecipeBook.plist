@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Item 0</key>
+	<dict>
+		<key>id</key>
+		<integer>0</integer>
+		<key>category</key>
+		<string>italian</string>
+		<key>recipes</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<integer>0</integer>
+				<key>title</key>
+				<string>Spaghetti alla Carbonara</string>
+				<key>image</key>
+				<string>carbonara</string>
+				<key>imageType</key>
+				<string>jpg</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>
