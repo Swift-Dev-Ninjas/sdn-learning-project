@@ -20,6 +20,7 @@
 		243A14342647CA0800E7AE6B /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A14322647CA0800E7AE6B /* CollectionViewCell.swift */; };
 		243A14412647D4A300E7AE6B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A14402647D4A300E7AE6B /* Recipe.swift */; };
 		243A14462647D70F00E7AE6B /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A14452647D70F00E7AE6B /* RecipeCategory.swift */; };
+		243A144B2647D93900E7AE6B /* RecipeBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A144A2647D93900E7AE6B /* RecipeBook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		243A14322647CA0800E7AE6B /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		243A14402647D4A300E7AE6B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		243A14452647D70F00E7AE6B /* RecipeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategory.swift; sourceTree = "<group>"; };
+		243A144A2647D93900E7AE6B /* RecipeBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				243A14402647D4A300E7AE6B /* Recipe.swift */,
 				243A14452647D70F00E7AE6B /* RecipeCategory.swift */,
+				243A144A2647D93900E7AE6B /* RecipeBook.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				243A14332647CA0800E7AE6B /* CollectionViewSectionHeader.swift in Sources */,
 				243A142D2647C9E400E7AE6B /* CollectionViewController.swift in Sources */,
 				243A14412647D4A300E7AE6B /* Recipe.swift in Sources */,
+				243A144B2647D93900E7AE6B /* RecipeBook.swift in Sources */,
 				243A14342647CA0800E7AE6B /* CollectionViewCell.swift in Sources */,
 				243A13F92647C6F300E7AE6B /* ViewController.swift in Sources */,
 				243A14462647D70F00E7AE6B /* RecipeCategory.swift in Sources */,
