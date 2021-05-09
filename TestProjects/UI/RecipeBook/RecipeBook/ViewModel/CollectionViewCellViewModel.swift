@@ -24,4 +24,16 @@ class CollectionViewCellViewModel {
     func setView(_ view: CollectionViewCellProtocol) {
         self.collectionViewCell = view
     }
+    
+    func setup() {
+        guard let collectionViewCell = collectionViewCell,
+              let recipe = recipe,
+              let calories = recipe.calories else {
+            return
+        }
+        
+        collectionViewCell.loadImage(resourceName: recipe.image)
+        collectionViewCell.setCaption(captionText: recipe.title)
+        collectionViewCell.setRecipeDetails(recipeDetailsText: "\(calories) kCal")
+    }
 }

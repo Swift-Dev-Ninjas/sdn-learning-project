@@ -8,5 +8,7 @@
 import Foundation
 
 protocol CollectionViewCellProtocol: class {
-
+    func loadImage(resourceName: String)
+    func setCaption(captionText: String)
+    func setRecipeDetails(recipeDetailsText: String)
 }

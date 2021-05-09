@@ -78,3 +78,46 @@ extension CollectionViewCellViewModelTests {
     }
 
 }
+
+// MARK: setup tests
+extension CollectionViewCellViewModelTests {
+    
+    func testSetup_ValidRecipe_Calls_LoadImage_WithExpectedImageName() {
+        
+        let expectation = self.expectation(description: "expected loadImage() to be called")
+        mockCollectionViewCell?.expectationForLoadImage = (expectation, validRecipe!.image)
+        
+        let viewModel =  CollectionViewCellViewModel(model: validRecipe)
+        viewModel?.setView(mockCollectionViewCell!)
+        
+        viewModel?.setup()
+        self.waitForExpectations(timeout: 1.0, handler: nil)
+    }
+
+    
+    func testSetup_ValidPhoto_Calls_SetCaption_WithExpectedText() {
+        
+        let expectation = self.expectation(description: "expected setCaption() to be called")
+        mockCollectionViewCell?.expectationForSetCaption = (expectation, validRecipe!.title)
+        
+        let viewModel =  CollectionViewCellViewModel(model: validRecipe)
+        viewModel?.setView(mockCollectionViewCell!)
+        
+        viewModel?.setup()
+        self.waitForExpectations(timeout: 1.0, handler: nil)
+    }
+    
+    func testSetup_ValidPhoto_Calls_SetShotDetails_WithExpectedText() {
+        
+        let expectation = self.expectation(description: "expected setShotDetails() to be called")
+        let expectedRecipeDetailsString = "\(validRecipe!.calories!) kCal"
+        mockCollectionViewCell?.expectationForSetupRecipeDetails = (expectation, expectedRecipeDetailsString)
+        
+        let viewModel =  CollectionViewCellViewModel(model: validRecipe)
+        viewModel?.setView(mockCollectionViewCell!)
+        
+        viewModel?.setup()
+        self.waitForExpectations(timeout: 1.0, handler: nil)
+    }
+    
+}
