@@ -49,3 +49,10 @@ class CollectionViewController: UICollectionViewController {
     }
 
 }
+
+extension CollectionViewController : CollectionViewControllerProtocol {
+    
+    func setNavigationTitle(_ title: String) {
+        self.title = title
+    }
+}

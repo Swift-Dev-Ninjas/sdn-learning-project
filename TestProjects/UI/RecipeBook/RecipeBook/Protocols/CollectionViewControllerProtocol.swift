@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CollectionViewControllerProtocol: class {
-    
+    func setNavigationTitle(_ title: String)
 }

@@ -35,6 +35,8 @@ class CollectionViewModelTests: XCTestCase {
 
 }
 
+// MARK: Init_ValidView tests
+
 extension CollectionViewModelTests {
     
     func testInit_ValidView_InstantiatesObject() {
@@ -62,5 +64,41 @@ extension CollectionViewModelTests {
         let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         let categories = viewModel.recipeBook!.categories!
         XCTAssertGreaterThan(categories.count, 0)
+    }
+}
+
+// MARK: performInitialViewSetup tests
+extension CollectionViewModelTests {
+    
+    func testPerformInitialViewSetup_Calls_SetNavigationTitle_OnCollectionViewController() {
+        let expectation = self.expectation(description: "expected setNavigationTitle() to be called")
+        mockCollectionViewController!.expectationForSetNavigationTitle = expectation
+        
+        let viewModel = CollectionViewModel(view:mockCollectionViewController!)
+        viewModel.performInitialViewSetup()
+        
+        self.waitForExpectations(timeout: 1.0, handler: nil)
+
+    }
+    
+    func testPerformInitialViewSetup_Calls_SetSectionInset_OnCollectionViewController() {
+//        let expectation = self.expectation(description: "expected setSectionInset() to be called")
+//        mockCollectionViewController!.expectationForSetSectionInset = expectation
+//
+//        let viewModel = CollectionViewModel(view:mockCollectionViewController!)
+//        viewModel.performInitialViewSetup()
+//
+//        self.waitForExpectations(timeout: 1.0, handler: nil)
+//
+    }
+    
+    func testPerformInitialViewSetup_Calls_SetupCollectionViewCellToUseMaxWidth_OnCollectionViewController() {
+//        let expectation = self.expectation(description: "expected setupCollectionViewCellToUseMaxWidth() to be called")
+//        mockCollectionViewController!.expectationForSetupCollectionViewCellToUseMaxWidth = expectation
+//
+//        let viewModel = CollectionViewModel(view:mockCollectionViewController!)
+//        viewModel.performInitialViewSetup()
+//
+//        self.waitForExpectations(timeout: 1.0, handler: nil)
     }
 }

@@ -23,4 +23,9 @@ class CollectionViewModel {
         let path = Bundle.main.path(forResource: "RecipeBook", ofType: "plist")
         recipeBook?.load(filePath: path)
     }
+    
+    func performInitialViewSetup() {
+        
+        view?.setNavigationTitle("Recipes Book")
+    }
 }
