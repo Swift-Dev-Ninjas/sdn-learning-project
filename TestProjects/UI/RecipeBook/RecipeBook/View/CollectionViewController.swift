@@ -1,8 +1,8 @@
 //
 //  CollectionViewController.swift
-//  PhotoBook
+//  RecipeBook
 //
-//  Created by Christian Slanzi on 10.02.21.
+//  Created by Christian Slanzi on 09.05.21.
 //
 
 import UIKit
