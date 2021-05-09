@@ -102,3 +102,19 @@ extension CollectionViewModelTests {
         self.waitForExpectations(timeout: 1.0, handler: nil)
     }
 }
+
+// MARK: numberOfSections  tests
+extension CollectionViewModelTests {
+    
+    func testNumberOfSections_ValidViewModelWithAlbum_ReturnsNumberOfCitiesInAlbum() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        XCTAssertEqual(viewModel.numberOfSections(), viewModel.recipeBook!.categories!.count)
+    }
+    
+    func testNumberOfSections_ValidViewModelNilAlbum_ReturnsZero() {
+//        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+//        viewModel.photoAlbum = nil
+//
+//        XCTAssertEqual(viewModel.numberOfSections(), 0)
+    }
+}
