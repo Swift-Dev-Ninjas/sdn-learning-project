@@ -5,7 +5,7 @@
 //  Created by Christian Slanzi on 09.05.21.
 //
 
-public struct RecipeCategory: Equatable {
+public struct RecipeCategory {
     
     public var id: Int
     public var title: String

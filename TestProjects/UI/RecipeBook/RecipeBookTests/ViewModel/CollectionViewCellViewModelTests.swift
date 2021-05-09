@@ -13,22 +13,26 @@ class CollectionViewCellViewModelTests: XCTestCase {
     fileprivate var validRecipe: Recipe?
     fileprivate var mockCollectionViewCell: MockCollectionViewCell?
     
-    let imageNameKey = "imageName"
-    let apertureKey = "aperture"
-    let shutterSpeedKey = "shutterSpeed"
-    let isoKey = "iso"
-    let commentKey = "comment"
+    let idKey = "id"
+    let titleKey = "title"
+    let imageKey = "image"
+    let imageTypeKey = "imageType"
+    let caloriesKey = "calories"
+    let carbsKey = "carbs"
+    let fatKey = "fat"
+    let proteinKey = "protein"
+    
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         var validRecipeDictionary1: [String : AnyObject]?
         validRecipeDictionary1 = [String : AnyObject]()
-        validRecipeDictionary1![imageNameKey] = "1" as AnyObject
-        validRecipeDictionary1![apertureKey] = "f2.0" as AnyObject
-        validRecipeDictionary1![shutterSpeedKey] = "1/250" as AnyObject
-        validRecipeDictionary1![isoKey] = "100" as AnyObject
-        validRecipeDictionary1![commentKey] = "Test photo" as AnyObject
+        validRecipeDictionary1![idKey] = 1 as AnyObject
+        validRecipeDictionary1![titleKey] = "Club Sandwich" as AnyObject
+        validRecipeDictionary1![imageKey] = "c-sandwich" as AnyObject
+        validRecipeDictionary1![imageTypeKey] = "jpg" as AnyObject
+        validRecipeDictionary1![caloriesKey] = 500 as AnyObject
         
         validRecipe = Recipe(validRecipeDictionary1)
         
@@ -39,4 +43,24 @@ class CollectionViewCellViewModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+}
+
+// MARK: initialization tests
+extension CollectionViewCellViewModelTests {
+    
+    func testInit_NilModel_DoesNotInstantiateObject() {
+        let viewModel = CollectionViewCellViewModel(model: nil)
+        XCTAssertNil(viewModel)
+    }
+    
+    func testInit_ValidModel_InstantiatesObject() {
+        let viewModel = CollectionViewCellViewModel(model: validRecipe)
+        XCTAssertNotNil(viewModel)
+    }
+    
+    func testInit_ValidModel_CopiesModelToIvar() {
+        let viewModel =  CollectionViewCellViewModel(model: validRecipe)
+        XCTAssertTrue(validRecipe === viewModel!.recipe!)
+    }
+    
 }
