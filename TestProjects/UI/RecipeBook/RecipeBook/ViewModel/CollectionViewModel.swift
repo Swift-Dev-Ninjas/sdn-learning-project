@@ -9,7 +9,9 @@ import Foundation
 
 class CollectionViewModel {
     
+    weak var view: CollectionViewControllerProtocol?
+    
     init(view: CollectionViewControllerProtocol) {
-        
+        self.view = view
     }
 }
