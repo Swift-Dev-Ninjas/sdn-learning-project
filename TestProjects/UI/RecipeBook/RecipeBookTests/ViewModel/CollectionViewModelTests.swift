@@ -112,9 +112,9 @@ extension CollectionViewModelTests {
     }
     
     func testNumberOfSections_ValidViewModelNilAlbum_ReturnsZero() {
-//        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
-//        viewModel.photoAlbum = nil
-//
-//        XCTAssertEqual(viewModel.numberOfSections(), 0)
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        viewModel.recipeBook = nil
+
+        XCTAssertEqual(viewModel.numberOfSections(), 0)
     }
 }
