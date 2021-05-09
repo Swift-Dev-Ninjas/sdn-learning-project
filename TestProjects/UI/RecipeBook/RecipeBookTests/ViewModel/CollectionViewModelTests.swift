@@ -82,14 +82,14 @@ extension CollectionViewModelTests {
     }
     
     func testPerformInitialViewSetup_Calls_SetSectionInset_OnCollectionViewController() {
-//        let expectation = self.expectation(description: "expected setSectionInset() to be called")
-//        mockCollectionViewController!.expectationForSetSectionInset = expectation
-//
-//        let viewModel = CollectionViewModel(view:mockCollectionViewController!)
-//        viewModel.performInitialViewSetup()
-//
-//        self.waitForExpectations(timeout: 1.0, handler: nil)
-//
+        let expectation = self.expectation(description: "expected setSectionInset() to be called")
+        mockCollectionViewController!.expectationForSetSectionInset = expectation
+
+        let viewModel = CollectionViewModel(view:mockCollectionViewController!)
+        viewModel.performInitialViewSetup()
+
+        self.waitForExpectations(timeout: 1.0, handler: nil)
+
     }
     
     func testPerformInitialViewSetup_Calls_SetupCollectionViewCellToUseMaxWidth_OnCollectionViewController() {

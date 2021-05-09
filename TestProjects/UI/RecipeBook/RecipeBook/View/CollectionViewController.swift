@@ -55,4 +55,11 @@ extension CollectionViewController : CollectionViewControllerProtocol {
     func setNavigationTitle(_ title: String) {
         self.title = title
     }
+    
+    func setSectionInset(top: Float, left: Float, bottom: Float, right: Float) {
+        if let collectionView = self.collectionView,
+            let collectionViewLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            collectionViewLayout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+        }
+    }
 }
