@@ -74,7 +74,7 @@ extension CollectionViewModelTests {
         let expectation = self.expectation(description: "expected setNavigationTitle() to be called")
         mockCollectionViewController!.expectationForSetNavigationTitle = expectation
         
-        let viewModel = CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel = CollectionViewModel(view: mockCollectionViewController!)
         viewModel.performInitialViewSetup()
         
         self.waitForExpectations(timeout: 1.0, handler: nil)
@@ -85,7 +85,7 @@ extension CollectionViewModelTests {
         let expectation = self.expectation(description: "expected setSectionInset() to be called")
         mockCollectionViewController!.expectationForSetSectionInset = expectation
 
-        let viewModel = CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel = CollectionViewModel(view: mockCollectionViewController!)
         viewModel.performInitialViewSetup()
 
         self.waitForExpectations(timeout: 1.0, handler: nil)
@@ -96,7 +96,7 @@ extension CollectionViewModelTests {
         let expectation = self.expectation(description: "expected setupCollectionViewCellToUseMaxWidth() to be called")
         mockCollectionViewController!.expectationForSetupCollectionViewCellToUseMaxWidth = expectation
 
-        let viewModel = CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel = CollectionViewModel(view: mockCollectionViewController!)
         viewModel.performInitialViewSetup()
 
         self.waitForExpectations(timeout: 1.0, handler: nil)
@@ -107,12 +107,12 @@ extension CollectionViewModelTests {
 extension CollectionViewModelTests {
     
     func testNumberOfSections_ValidViewModelWithAlbum_ReturnsNumberOfCitiesInAlbum() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         XCTAssertEqual(viewModel.numberOfSections(), viewModel.recipeBook!.categories!.count)
     }
     
     func testNumberOfSections_ValidViewModelNilAlbum_ReturnsZero() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         viewModel.recipeBook = nil
 
         XCTAssertEqual(viewModel.numberOfSections(), 0)
@@ -123,33 +123,33 @@ extension CollectionViewModelTests {
 extension CollectionViewModelTests {
     
     func testNumberOfItemsInSection_ValidViewModelNilAlbum_ReturnsZero() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         viewModel.recipeBook = nil
         
         XCTAssertEqual(viewModel.numberOfItemsInSection(0), 0)
     }
     
     func testNumberOfItemsInSection_ValidViewModelNilCities_ReturnsZero() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         viewModel.recipeBook!.categories = nil
         
         XCTAssertEqual(viewModel.numberOfItemsInSection(0), 0)
     }
     
     func testNumberOfItemsInSection_NegtiveSectionIndex_ReturnsZero() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
 
         XCTAssertEqual(viewModel.numberOfItemsInSection(-1), 0)
     }
     
     func testNumberOfItemsInSection_OutOfBoundsSectionIndex_ReturnsZero() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         
         XCTAssertEqual(viewModel.numberOfItemsInSection(1000), 0)
     }
     
     func testNumberOfItemsInSection_ValidSectionIndex_ReturnsExpectedValue() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         
         XCTAssertEqual(viewModel.numberOfItemsInSection(0), viewModel.recipeBook!.categories![0].recipes!.count)
     }
@@ -159,58 +159,58 @@ extension CollectionViewModelTests {
 extension CollectionViewModelTests {
     
     func testCellViewModel_ValidViewModelNilAlbum_ReturnsNil() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         viewModel.recipeBook = nil
         
         XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 0)))
     }
     
     func testCellViewModel_ValidViewModelNilCities_ReturnsNil() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         viewModel.recipeBook!.categories = nil
         
         XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 0)))
     }
     
     func testCellViewModel_ValidViewModelNilPhotos_ReturnsNil() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         viewModel.recipeBook!.categories![0].recipes = nil
         
         XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 0)))
     }
     
     func testCellViewModel_NegtiveRowIndex_ReturnsNil() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         
         XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: -1, section: 0)))
     }
     
     func testCellViewModel_NegtiveSectionIndex_ReturnsNil() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         
         XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: -1)))
     }
     
     func testCellViewModel_OutOfBoundsRowIndex_ReturnsNil() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         
         XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 1000, section: 0)))
     }
     
     func testCellViewModel_OutOfBoundsSectionIndex_ReturnsNil() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         
         XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 1000)))
     }
     
     func testCellViewModel_ValidSectionIndex_DoesNotReturnNil() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         
         XCTAssertNotNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 0)))
     }
     
     func testCellViewModel_ValidSectionIndex_ReturnsViewModelWithExpectedModelObject() {
-        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
         
         let rowIndex = 0
         let sectionIndex = 0
@@ -221,4 +221,55 @@ extension CollectionViewModelTests {
         
         XCTAssertEqual(cellViewModel!.recipe, expectedModelObject)
     }
+}
+
+// MARK: headerViewModel tests
+extension CollectionViewModelTests {
+    
+    func testHeaderViewModel_ValidViewModelNilRecipeBook_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
+        viewModel.recipeBook = nil
+        
+        XCTAssertNil(viewModel.headerViewModel(indexPath: IndexPath(row: 0, section: 0)))
+    }
+    
+    func testHeaderViewModel_ValidViewModelNilCategories_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
+        viewModel.recipeBook!.categories = nil
+        
+        XCTAssertNil(viewModel.headerViewModel(indexPath: IndexPath(row: 0, section: 0)))
+    }
+    
+    func testHeaderViewModel_NegativeSectionIndex_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
+        
+        XCTAssertNil(viewModel.headerViewModel(indexPath: IndexPath(row: 0, section: -1)))
+    }
+    
+    func testHeaderViewModel_OutOfBoundsSectionIndex_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
+        
+        XCTAssertNil(viewModel.headerViewModel(indexPath: IndexPath(row: 0, section: 1000)))
+    }
+    
+    func testHeaderViewModel_ValidSectionIndex_DoesNotReturnNil() {
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
+        
+        XCTAssertNotNil(viewModel.headerViewModel(indexPath: IndexPath(row: 0, section: 0)))
+    }
+    
+    func testHeaderViewModel_ValidSectionIndex_ReturnsViewModelWithExpectedSectionTitle() {
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
+        
+        let rowIndex = 0
+        let sectionIndex = 0
+        
+        let headerViewModel = viewModel.headerViewModel(indexPath: IndexPath(row: rowIndex, section: sectionIndex))
+        
+        let expectedSectionTitle = viewModel.recipeBook!.categories![sectionIndex].title
+        
+        XCTAssertEqual(headerViewModel!.sectionTitle, expectedSectionTitle)
+        
+    }
+    
 }

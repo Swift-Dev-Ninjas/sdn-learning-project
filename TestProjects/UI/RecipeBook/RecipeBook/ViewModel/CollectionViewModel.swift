@@ -73,4 +73,19 @@ class CollectionViewModel {
         
         return CollectionViewCellViewModel(model: recipes[indexPath.row])
     }
+    
+    func headerViewModel(indexPath: IndexPath) -> CollectionViewSectionHeaderViewModel? {
+        
+        guard let recipeBook = recipeBook,
+              let categories = recipeBook.categories else {
+            return nil
+            
+        }
+        
+        if ((indexPath.section < 0) || (indexPath.section >= categories.count)) {
+            return nil
+        }
+        
+        return CollectionViewSectionHeaderViewModel(model: categories[indexPath.section].title)
+    }
 }
