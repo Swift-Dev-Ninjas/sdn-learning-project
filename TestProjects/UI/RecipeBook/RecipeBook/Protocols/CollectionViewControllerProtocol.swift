@@ -10,4 +10,5 @@ import Foundation
 protocol CollectionViewControllerProtocol: class {
     func setNavigationTitle(_ title: String)
     func setSectionInset(top:Float, left:Float, bottom:Float, right:Float)
+    func setupCollectionViewCellToUseMaxWidth()
 }
