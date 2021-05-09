@@ -23,6 +23,10 @@
 		243A144B2647D93900E7AE6B /* RecipeBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243A144A2647D93900E7AE6B /* RecipeBook.swift */; };
 		243A14502647E8F200E7AE6B /* RecipeBook.plist in Resources */ = {isa = PBXBuildFile; fileRef = 243A144F2647E8F200E7AE6B /* RecipeBook.plist */; };
 		24F7B06426482DF1005FC59C /* carbonara.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24F7B06326482DF1005FC59C /* carbonara.jpg */; };
+		24F7B06A26482E8E005FC59C /* CollectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7B06926482E8E005FC59C /* CollectionViewModelTests.swift */; };
+		24F7B07426482FA6005FC59C /* MockCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7B07326482FA6005FC59C /* MockCollectionViewController.swift */; };
+		24F7B07C26482FFD005FC59C /* CollectionViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7B07B26482FFD005FC59C /* CollectionViewControllerProtocol.swift */; };
+		24F7B08126483080005FC59C /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7B08026483080005FC59C /* CollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		243A144A2647D93900E7AE6B /* RecipeBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBook.swift; sourceTree = "<group>"; };
 		243A144F2647E8F200E7AE6B /* RecipeBook.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RecipeBook.plist; sourceTree = "<group>"; };
 		24F7B06326482DF1005FC59C /* carbonara.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carbonara.jpg; sourceTree = "<group>"; };
+		24F7B06926482E8E005FC59C /* CollectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelTests.swift; sourceTree = "<group>"; };
+		24F7B07326482FA6005FC59C /* MockCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCollectionViewController.swift; sourceTree = "<group>"; };
+		24F7B07B26482FFD005FC59C /* CollectionViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerProtocol.swift; sourceTree = "<group>"; };
+		24F7B08026483080005FC59C /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,9 @@
 		243A140A2647C6F400E7AE6B /* RecipeBookTests */ = {
 			isa = PBXGroup;
 			children = (
+				24F7B07126482F23005FC59C /* Stubs */,
+				24F7B07226482F2E005FC59C /* Mocks */,
+				24F7B06826482E6B005FC59C /* ViewModel */,
 				243A140B2647C6F400E7AE6B /* RecipeBookTests.swift */,
 				243A140D2647C6F400E7AE6B /* Info.plist */,
 			);
@@ -161,6 +172,7 @@
 		243A14282647C8C700E7AE6B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				24F7B07B26482FFD005FC59C /* CollectionViewControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -178,6 +190,7 @@
 		243A142A2647C8DF00E7AE6B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				24F7B08026483080005FC59C /* CollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,6 +203,29 @@
 				243A142C2647C9E400E7AE6B /* CollectionViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		24F7B06826482E6B005FC59C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				24F7B06926482E8E005FC59C /* CollectionViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		24F7B07126482F23005FC59C /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		24F7B07226482F2E005FC59C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				24F7B07326482FA6005FC59C /* MockCollectionViewController.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +366,8 @@
 				243A144B2647D93900E7AE6B /* RecipeBook.swift in Sources */,
 				243A14342647CA0800E7AE6B /* CollectionViewCell.swift in Sources */,
 				243A13F92647C6F300E7AE6B /* ViewController.swift in Sources */,
+				24F7B07C26482FFD005FC59C /* CollectionViewControllerProtocol.swift in Sources */,
+				24F7B08126483080005FC59C /* CollectionViewModel.swift in Sources */,
 				243A14462647D70F00E7AE6B /* RecipeCategory.swift in Sources */,
 				243A13F52647C6F300E7AE6B /* AppDelegate.swift in Sources */,
 				243A13F72647C6F300E7AE6B /* SceneDelegate.swift in Sources */,
@@ -340,6 +378,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F7B06A26482E8E005FC59C /* CollectionViewModelTests.swift in Sources */,
+				24F7B07426482FA6005FC59C /* MockCollectionViewController.swift in Sources */,
 				243A140C2647C6F400E7AE6B /* RecipeBookTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
