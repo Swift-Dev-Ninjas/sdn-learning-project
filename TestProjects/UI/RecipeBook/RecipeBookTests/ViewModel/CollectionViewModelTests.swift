@@ -154,3 +154,71 @@ extension CollectionViewModelTests {
         XCTAssertEqual(viewModel.numberOfItemsInSection(0), viewModel.recipeBook!.categories![0].recipes!.count)
     }
 }
+
+// MARK: cellViewModel tests
+extension CollectionViewModelTests {
+    
+    func testCellViewModel_ValidViewModelNilAlbum_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        viewModel.recipeBook = nil
+        
+        XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 0)))
+    }
+    
+    func testCellViewModel_ValidViewModelNilCities_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        viewModel.recipeBook!.categories = nil
+        
+        XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 0)))
+    }
+    
+    func testCellViewModel_ValidViewModelNilPhotos_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        viewModel.recipeBook!.categories![0].recipes = nil
+        
+        XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 0)))
+    }
+    
+    func testCellViewModel_NegtiveRowIndex_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        
+        XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: -1, section: 0)))
+    }
+    
+    func testCellViewModel_NegtiveSectionIndex_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        
+        XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: -1)))
+    }
+    
+    func testCellViewModel_OutOfBoundsRowIndex_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        
+        XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 1000, section: 0)))
+    }
+    
+    func testCellViewModel_OutOfBoundsSectionIndex_ReturnsNil() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        
+        XCTAssertNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 1000)))
+    }
+    
+    func testCellViewModel_ValidSectionIndex_DoesNotReturnNil() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        
+        XCTAssertNotNil(viewModel.cellViewModel(indexPath:IndexPath(row: 0, section: 0)))
+    }
+    
+    func testCellViewModel_ValidSectionIndex_ReturnsViewModelWithExpectedModelObject() {
+        let viewModel =  CollectionViewModel(view:mockCollectionViewController!)
+        
+        let rowIndex = 0
+        let sectionIndex = 0
+        
+        let cellViewModel = viewModel.cellViewModel(indexPath:IndexPath(row: rowIndex, section: sectionIndex))
+        
+        let expectedModelObject = viewModel.recipeBook!.categories![sectionIndex].recipes![rowIndex]
+        
+        XCTAssertEqual(cellViewModel!.recipe, expectedModelObject)
+    }
+}

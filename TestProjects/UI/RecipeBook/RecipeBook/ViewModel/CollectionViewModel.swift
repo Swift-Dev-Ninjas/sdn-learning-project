@@ -51,4 +51,26 @@ class CollectionViewModel {
         
         return recipes.count
     }
+    
+    func cellViewModel(indexPath: IndexPath) -> CollectionViewCellViewModel? {
+        
+        guard let recipeBook = recipeBook,
+              let categories = recipeBook.categories else {
+                return nil
+        }
+        
+        if ((indexPath.section < 0) || (indexPath.section >= categories.count)) {
+            return nil
+        }
+        
+        guard let recipes = categories[indexPath.section].recipes else {
+            return nil
+        }
+        
+        if ((indexPath.row < 0) || (indexPath.row >= recipes.count)) {
+            return nil
+        }
+        
+        return CollectionViewCellViewModel(model: recipes[indexPath.row])
+    }
 }
