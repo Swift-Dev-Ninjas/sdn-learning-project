@@ -29,7 +29,7 @@
         <!--Collection View Controller-->
         <scene sceneID="ZsG-e6-Nla">
             <objects>
-                <collectionViewController id="FnT-Ui-NYa" customClass="CollectionViewController" customModule="PhotoBook" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="FnT-Ui-NYa" customClass="CollectionViewController" customModule="RecipeBook" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Qj6-YG-nAA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="djb-jl-NLb" customClass="CollectionViewCell" customModule="PhotoBook" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="djb-jl-NLb" customClass="CollectionViewCell" customModule="RecipeBook" customModuleProvider="target">
                                 <rect key="frame" x="82" y="25" width="250" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GCv-mY-Qpz">
@@ -93,12 +93,12 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="captionLabel" destination="IDs-QP-yOo" id="dvl-RQ-DMc"/>
+                                    <outlet property="cellDetailsLabel" destination="w2I-bg-QjZ" id="t5U-my-Nab"/>
                                     <outlet property="imageView" destination="tl6-50-u9U" id="2Y0-zQ-NJB"/>
-                                    <outlet property="shotDetailsLabel" destination="w2I-bg-QjZ" id="xOa-gz-8UN"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionViewSectionHeader" id="YXJ-qf-IWj" customClass="CollectionViewSectionHeader" customModule="PhotoBook" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionViewSectionHeader" id="YXJ-qf-IWj" customClass="CollectionViewSectionHeader" customModule="RecipeBook" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>

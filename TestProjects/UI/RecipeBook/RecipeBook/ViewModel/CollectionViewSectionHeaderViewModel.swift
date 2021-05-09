@@ -18,6 +18,10 @@ class CollectionViewSectionHeaderViewModel {
         self.sectionTitle = model
     }
     
+    func setView(_ view: CollectionViewSectionHeaderProtocol) {
+        self.collectionViewSectionHeader = view
+    }
+    
     func setup() {
         
         guard let collectionViewSectionHeader = collectionViewSectionHeader ,

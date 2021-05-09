@@ -18,6 +18,8 @@
 				<string>carbonara</string>
 				<key>imageType</key>
 				<string>jpg</string>
+				<key>calories</key>
+				<integer>550</integer>
 			</dict>
 		</array>
 	</dict>
