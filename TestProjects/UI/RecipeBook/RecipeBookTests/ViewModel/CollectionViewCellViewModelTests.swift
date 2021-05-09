@@ -64,3 +64,17 @@ extension CollectionViewCellViewModelTests {
     }
     
 }
+
+// MARK: setView tests
+extension CollectionViewCellViewModelTests {
+    
+    func testSetView_ValidView_CopiesViewToIvar() {
+        let viewModel =  CollectionViewCellViewModel(model: validRecipe)
+        viewModel?.setView(mockCollectionViewCell!)
+        
+        if let lhs = mockCollectionViewCell, let rhs = viewModel?.collectionViewCell as? MockCollectionViewCell {
+            XCTAssertTrue(lhs === rhs)
+        }
+    }
+
+}

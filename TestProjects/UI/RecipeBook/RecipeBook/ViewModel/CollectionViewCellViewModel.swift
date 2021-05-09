@@ -10,6 +10,7 @@ import Foundation
 class CollectionViewCellViewModel {
     
     var recipe: Recipe?
+    weak var collectionViewCell: CollectionViewCellProtocol?
     
     init?(model: Recipe?) {
         
@@ -18,5 +19,9 @@ class CollectionViewCellViewModel {
         }
         
         self.recipe = model
+    }
+    
+    func setView(_ view: CollectionViewCellProtocol) {
+        self.collectionViewCell = view
     }
 }
