@@ -7,6 +7,12 @@
 
 import Foundation
 
+class CollectionViewModel {
+    
+    init(view: CollectionViewControllerProtocol) {
+    }
+}
+
 /*
 class CollectionViewModel {
     

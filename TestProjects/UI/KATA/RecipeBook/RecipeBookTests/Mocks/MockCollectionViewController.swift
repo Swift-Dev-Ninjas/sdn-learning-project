@@ -9,7 +9,7 @@ import Foundation
 import XCTest
 @testable import RecipeBook
 
-/*
+
 class MockCollectionViewController: CollectionViewControllerProtocol {
 
     var expectationForSetNavigationTitle: XCTestExpectation?
@@ -28,4 +28,3 @@ class MockCollectionViewController: CollectionViewControllerProtocol {
         expectationForSetupCollectionViewCellToUseMaxWidth?.fulfill()
     }
 }
-*/
