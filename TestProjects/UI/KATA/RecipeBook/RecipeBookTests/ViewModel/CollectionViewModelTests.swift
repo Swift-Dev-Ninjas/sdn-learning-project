@@ -44,14 +44,14 @@ extension CollectionViewModelTests {
     }
     
     func testInit_ValidView_RecipeBookIVarIsNotNil() {
-//        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
-//        XCTAssertNotNil(viewModel.recipeBook)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
+        XCTAssertNotNil(viewModel.recipeBook)
     }
     
     func testInit_ValidView_RecipeBookIsLoaded() {
-//        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
-//        let categories = viewModel.recipeBook!.categories!
-//        XCTAssertGreaterThan(categories.count, 0)
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
+        let categories = viewModel.recipeBook!.categories!
+        XCTAssertGreaterThan(categories.count, 0)
     }
 }
 
