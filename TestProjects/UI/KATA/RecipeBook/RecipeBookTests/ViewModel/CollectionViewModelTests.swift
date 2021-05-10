@@ -33,14 +33,14 @@ extension CollectionViewModelTests {
     }
     
     func testInit_ValidView_CopiesViewToIvar() {
-//        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
-//
-//        XCTAssertNotNil(viewModel.view)
-//
-//        if let lhs = mockCollectionViewController, let rhs = viewModel.view as? MockCollectionViewController {
-//
-//            XCTAssertTrue(lhs === rhs)
-//        }
+        let viewModel =  CollectionViewModel(view: mockCollectionViewController!)
+
+        XCTAssertNotNil(viewModel.view)
+
+        if let lhs = mockCollectionViewController, let rhs = viewModel.view as? MockCollectionViewController {
+
+            XCTAssertTrue(lhs === rhs)
+        }
     }
     
     func testInit_ValidView_RecipeBookIVarIsNotNil() {
